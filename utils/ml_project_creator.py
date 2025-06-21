@@ -267,39 +267,3 @@ python create_ml_project.py my_project --folders "data:raw,processed,external" "
 python create_ml_project.py my_project --folders "data:input,output,temp" "models:saved,experiments" "results:plots,reports,metrics" logs
 
 """
-
-
-"""
-# Use default structure
-creator = MLProjectCreator()
-creator.create_project("my_project")
-
-# Custom nested structure
-custom_structure = {
-    "data": ["raw", "processed", "cleaned"],
-    "models": ["experiments", "production"],
-    "code": [],
-    "results": ["plots", "reports"]
-}
-creator = MLProjectCreator(folders=custom_structure)
-creator.create_project("custom_project")
-
-# Simple structure
-simple_folders = ["data", "models", "scripts", "output"]
-creator = MLProjectCreator(folders=simple_folders)
-creator.create_project("simple_project")
-
-
-# Use default structure
-python create_ml_project.py my_project
-
-# Simple folders
-python create_ml_project.py my_project --folders data models scripts output
-
-# Folders with subdirectories (colon syntax)
-python create_ml_project.py my_project --folders "data:raw,processed,external" "models:trained,checkpoints" scripts
-
-# Complex example
-python create_ml_project.py my_project --folders "data:input,output,temp" "models:saved,experiments" "results:plots,reports,metrics" logs
-
-"""
