@@ -17,7 +17,7 @@ class MLProjectCreator:
         """
         # Default subfolder structure (with subdirectories)
         default_structure: Dict[str, List[str]] = {
-            "data": ["raw", "output", "processed"],
+            "data": ["raw", "output", "processed","mappings"],
             "models": ["checkpoints"],
             "utils": [],
             "logs": [],
